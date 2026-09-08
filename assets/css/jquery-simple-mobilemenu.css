@@ -36,7 +36,7 @@ body.mmactive {
 }
 .sm_menu_outer .mobile_menu li.back a {
   padding: 20px 5px 20px 55px;
-  background: url("../img/back.png") no-repeat scroll 15px center / 2% auto;
+  background: url("../img/back.webp") no-repeat scroll 15px center / 2% auto;
 }
 .sm_menu_outer .mobile_menu a {
 	color: #ffffff;
@@ -67,7 +67,7 @@ body.mmactive {
   color: #ffffff;
 }
 .sm_menu_outer.slide .mobile_menu li.hasChild>a {
-  background: url("../img/next.png") no-repeat scroll 95% center / 2% auto;
+  background: url("../img/next.webp") no-repeat scroll 95% center / 2% auto;
 }
 /*Hamburger Animation */
 #sm_menu_ham {
@@ -154,7 +154,7 @@ body.mmactive {
 .sm_menu_outer.accordion .mobile_menu li.hasChild>a::before {
   position: absolute;
   content: '';
-  background: url("../images/next.png") no-repeat scroll 50% center / 60% auto;
+  background: url("../images/next.webp") no-repeat scroll 50% center / 60% auto;
   right: 0;
   top: 20px;
   width: 40px;

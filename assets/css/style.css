@@ -1927,7 +1927,7 @@ margin-right: 5px;
 * ----------------------------------------------------------------------------------------
 */
 .testi_area {
-	background: url(../img/bg/shape-1.png) no-repeat;
+	background: url(../img/bg/shape-1.webp) no-repeat;
 	background-size: cover;
 }
 .testimonial {
@@ -2839,7 +2839,7 @@ font-weight: 700;
 .section-top {
 	padding-top:150px;
 	position: relative;
-	background: url(../img/bg/section-top.jpg);
+	background: url(../img/bg/section-top.webp);
 	background-size: cover;
 	background-position: center;
 	padding-bottom: 90px;
