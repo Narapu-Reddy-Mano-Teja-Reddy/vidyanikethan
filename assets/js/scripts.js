@@ -8,11 +8,10 @@ Version      : 1.0
 	
 	jQuery(document).on('ready', function(){
 	
-		/*PRELOADER JS*/
+		/*PRELOADER JS - INSTANT DISPLAY FIX*/
+		$('.preloaders').fadeOut(100);
 		$(window).on('load', function() { 
-			setTimeout(function(){
-				$('.preloaders').fadeToggle();
-			}, 1500);
+			$('.preloaders').fadeOut(100);
 		}); 
 		/*END PRELOADER JS*/		
 		

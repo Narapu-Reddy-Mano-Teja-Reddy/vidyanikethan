@@ -3032,5 +3032,152 @@ font-weight: 700;
     transform: translateY(-3px);
 }
 
+/* ==========================================================================
+   GLOBAL FOOTER STYLING: PURE WHITE TEXT ACROSS ALL PAGES
+   ========================================================================== */
+.footer,
+.footer *,
+.single_footer,
+.single_footer *,
+.footer_copyright,
+.footer_copyright *,
+.single_footer p,
+.single_footer h4,
+.single_footer span,
+.single_footer ul li,
+.single_footer ul li a,
+.footer_copyright p,
+.footer_copyright a {
+	color: #ffffff !important;
+}
+
+.footer a:hover,
+.single_footer a:hover,
+.single_footer ul li a:hover,
+.footer_copyright a:hover {
+	color: #ffc107 !important;
+	text-decoration: underline !important;
+}
+
+.footer .social_profile ul li a {
+	color: #ffffff !important;
+	border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.footer .social_profile ul li a:hover {
+	background: #525fe1 !important;
+	border-color: #525fe1 !important;
+	color: #ffffff !important;
+}
+
+/* ==========================================================================
+   GLOBAL MOBILE RESPONSIVENESS FIXES
+   ========================================================================== */
+html, body {
+	overflow-x: hidden !important;
+	max-width: 100% !important;
+}
+
+img, video {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Hero background video responsiveness */
+.home_bg video {
+	max-width: none !important;
+	height: 100% !important;
+}
+
+@media only screen and (max-width: 991px) {
+	.home_bg {
+		min-height: auto !important;
+		padding: 100px 0 50px !important;
+	}
+	
+	.hero-text h1 {
+		font-size: 2.2rem !important;
+		line-height: 1.3 !important;
+	}
+
+	.hero-text p {
+		font-size: 1rem !important;
+	}
+
+	.section-padding {
+		padding: 50px 0 !important;
+	}
+
+	.section-title h2 {
+		font-size: 28px !important;
+		line-height: 36px !important;
+	}
+
+	.section-title p {
+		width: 95% !important;
+	}
+
+	#navigation {
+		padding: 15px 20px !important;
+	}
+	
+	.equal-height-row > div {
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.hero-text h1 {
+		font-size: 1.7rem !important;
+	}
+
+	.hero-text p {
+		font-size: 0.9rem !important;
+	}
+
+	.home_sb {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.home_sb .btn_one {
+		width: 100%;
+		text-align: center;
+	}
+
+	.glass-counter-card {
+		padding: 10px !important;
+	}
+
+	.glass-counter-card h2 {
+		font-size: 22px !important;
+	}
+
+	.glass-counter-card p {
+		font-size: 12px !important;
+	}
+
+	.site-logo span {
+		font-size: 16px !important;
+	}
+}
+
+/* ==========================================================================
+   INSTANT TEXT LOAD & RENDERING OPTIMIZATION
+   ========================================================================== */
+.preloaders {
+	display: none !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+}
+
+.wow {
+	visibility: visible !important;
+	opacity: 1 !important;
+	animation-duration: 0.3s !important;
+}
+
+
+
 
 
