@@ -249,10 +249,12 @@ margin-top: 0px;
 	width: 20%;
 }
 .site-logo{
-	width: 150px;
+	width: auto;
+	max-width: 360px;
 }
 .site-logo a{
-	display: block;
+	display: flex;
+	align-items: center;
 }
 .site-logo img{
 	max-width: 100%;
@@ -2520,6 +2522,7 @@ color:#fff;
 }
 .f_facebook:hover{background:#3B5998;}
 .f_twitter:hover{background:#1A90D9;}
+.f_youtube:hover{background:#FF0000;}
 .f_instagram:hover{background:#FF5252;}
 .f_linkedin:hover{background:#0e76a8;}
 .foot_img{width:100%;}
