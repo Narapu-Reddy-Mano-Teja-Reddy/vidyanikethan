@@ -1,0 +1,9 @@
+# OS & System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Raw unoptimized camera and chat upload sources
+images/DSC_*.JPG
+images/DSC_*.jpg
+images/WhatsApp Image*

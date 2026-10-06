@@ -65,6 +65,20 @@
 				transform: translateY(-5px);
 				box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
 			}
+			.filter-btn {
+				background: transparent;
+				color: #475569;
+				border: none;
+				transition: all 0.3s ease;
+			}
+			.filter-btn:hover, .filter-btn.active {
+				background: #0b104a !important;
+				color: #fff !important;
+				box-shadow: 0 4px 12px rgba(11, 16, 74, 0.2);
+			}
+			.gallery-item {
+				transition: all 0.4s ease;
+			}
 
 					.about-banner {
     background: linear-gradient(rgba(11, 16, 74, 0.6), rgba(11, 16, 74, 0.6)),
@@ -165,40 +179,174 @@
 		<section class="section-padding" style="background: #f8f9fa;">
 			<div class="container">
 				<div class="row justify-content-center">
-					<div class="col-lg-8 text-center mb-5">
+					<div class="col-lg-8 text-center mb-4">
 						<h6 class="text-uppercase text-warning fw-bold mb-2" style="letter-spacing: 2px; font-family: 'Jost', sans-serif;">Moments & Activities</h6>
 						<h2 style="font-size: 2.2rem; font-weight: 700; color: #0b104a;" class="mb-3">Vidyaniketan in Pictures</h2>
-						<p class="text-muted leading-relaxed" style="font-size: 16px; line-height: 1.8;">Every picture tells the story of our commitment to education. Explore moments from classroom activities, science laboratories, cultural celebrations, seminars, sports competitions, annual events, and student achievements that make Vidyaniketan Jr College a vibrant learning community.</p>
+						<p class="text-muted leading-relaxed" style="font-size: 16px; line-height: 1.8;">Explore our vibrant campus life, academic milestones, state board rankers, laboratory sessions, felicitation events, and cultural celebrations at Vidyaniketan Jr College, V.Kota.</p>
 					</div>
 				</div>
 
-				<div class="row">
-					<!-- Item 1: Classrooms -->
-					<div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.1s">
+				<!-- Filter Buttons -->
+				<div class="row mb-5">
+					<div class="col-12 text-center">
+						<div class="d-inline-flex flex-wrap justify-content-center gap-2 p-2 bg-white rounded-pill shadow-sm border">
+							<button class="btn btn-sm rounded-pill px-4 py-2 filter-btn active" data-filter="all" style="font-weight: 600; font-size: 13px;">All Moments</button>
+							<button class="btn btn-sm rounded-pill px-4 py-2 filter-btn" data-filter="achievements" style="font-weight: 600; font-size: 13px;">Achievements & Ranks</button>
+							<button class="btn btn-sm rounded-pill px-4 py-2 filter-btn" data-filter="events" style="font-weight: 600; font-size: 13px;">Campus Life & Culture</button>
+							<button class="btn btn-sm rounded-pill px-4 py-2 filter-btn" data-filter="academics" style="font-weight: 600; font-size: 13px;">CET & Academics</button>
+							<button class="btn btn-sm rounded-pill px-4 py-2 filter-btn" data-filter="campus" style="font-weight: 600; font-size: 13px;">Campus & Labs</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" id="gallery-grid">
+					<!-- Item 1: IPE-2024 Rankers -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="achievements" data-wow-delay="0.1s">
 						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
-							<img src="images/classrooms.webp" class="card-img-top w-100" style="height: 220px; object-fit: cover;" alt="Classroom Learning">
+							<a href="images/toppers-rankers-2024.webp" class="gallery_popup d-block position-relative" title="IPE-2024 State & Mandal Top Rankers">
+								<img src="images/toppers-rankers-2024.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover;" alt="IPE-2024 State & Mandal Top Rankers">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 bg-warning text-dark fw-bold rounded-pill" style="font-size: 11px;">State & Mandal Ranks</span>
+							</a>
 							<div class="p-4 bg-white text-center">
-								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">Classroom Learning</h5>
-								<p class="text-muted mb-0" style="font-size: 13px;">Interactive smart classrooms with disciplined academic environment.</p>
+								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">IPE-2024 Board Toppers</h5>
+								<p class="text-muted mb-0" style="font-size: 13px;">State Rank 981/1000 in BiPC & highest marks in V.Kota Mandal across MPC, BiPC, CEC.</p>
 							</div>
 						</div>
 					</div>
 
-					<!-- Item 2: Biology & Science Lab -->
-					<div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+					<!-- Item 2: Graduation & Felicitation -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="achievements" data-wow-delay="0.2s">
 						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
-							<img src="images/biologylab.webp" class="card-img-top w-100" style="height: 220px; object-fit: cover;" alt="Science & Biology Lab">
+							<a href="images/graduation-felicitation.webp" class="gallery_popup d-block position-relative" title="College Felicitation & Convocation Day">
+								<img src="images/graduation-felicitation.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover;" alt="College Felicitation Ceremony">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 text-white fw-bold rounded-pill" style="background: #0b104a; font-size: 11px;">Convocation Day</span>
+							</a>
+							<div class="p-4 bg-white text-center">
+								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">Felicitation Ceremony</h5>
+								<p class="text-muted mb-0" style="font-size: 13px;">Chairman Sri R. Damodhar Reddy honored by DSP Sri Raghuveer Vishnu at College Convocation.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 3: Cultural Celebrations -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="events" data-wow-delay="0.3s">
+						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
+							<a href="images/cultural-events.webp" class="gallery_popup d-block position-relative" title="Annual Day & Cultural Celebrations">
+								<img src="images/cultural-events.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover;" alt="Annual Day and Cultural Celebrations">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 bg-danger text-white fw-bold rounded-pill" style="font-size: 11px;">Campus Culture</span>
+							</a>
+							<div class="p-4 bg-white text-center">
+								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">Annual Day & Cultural Fest</h5>
+								<p class="text-muted mb-0" style="font-size: 13px;">Traditional cultural celebrations, stage performances, and festive gatherings on campus.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 4: EAPCET Coaching Prep -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="academics" data-wow-delay="0.1s">
+						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
+							<a href="images/student-eapcet-prep.webp" class="gallery_popup d-block position-relative" title="Long-Term EAPCET Entrance Mentorship">
+								<img src="images/student-eapcet-prep.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover; object-position: top;" alt="EAPCET Competitive Exam Preparation">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 bg-primary text-white fw-bold rounded-pill" style="font-size: 11px;">CET Coaching</span>
+							</a>
+							<div class="p-4 bg-white text-center">
+								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">EAPCET & CET Mentorship</h5>
+								<p class="text-muted mb-0" style="font-size: 13px;">Dedicated material and specialized entrance mentoring for AP EAPCET, NEET & IIT Mains.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 5: Core Subject Study -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="academics" data-wow-delay="0.2s">
+						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
+							<a href="images/student-maths-prep.webp" class="gallery_popup d-block position-relative" title="Mathematics & Science Syllabus Mastery">
+								<img src="images/student-maths-prep.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover; object-position: top;" alt="Academic Study and Textbooks">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 bg-info text-white fw-bold rounded-pill" style="font-size: 11px;">Board Focus</span>
+							</a>
+							<div class="p-4 bg-white text-center">
+								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">Academic Excellence</h5>
+								<p class="text-muted mb-0" style="font-size: 13px;">Comprehensive preparation across Senior Inter Mathematics, Physics, Chemistry & Commerce.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 6: Disciplined Student Life -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="events" data-wow-delay="0.3s">
+						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
+							<a href="images/student-life.webp" class="gallery_popup d-block position-relative" title="Disciplined Learning Environment">
+								<img src="images/student-life.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover; object-position: top;" alt="Disciplined Student Life">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 bg-success text-white fw-bold rounded-pill" style="font-size: 11px;">Discipline</span>
+							</a>
+							<div class="p-4 bg-white text-center">
+								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">Disciplined Learning Culture</h5>
+								<p class="text-muted mb-0" style="font-size: 13px;">Emphasis on daily attendance, systematic study habits, and personalized mentoring.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 7: Campus Building -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="campus" data-wow-delay="0.1s">
+						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
+							<a href="images/college.webp" class="gallery_popup d-block position-relative" title="Vidyaniketan Main Campus Building">
+								<img src="images/college.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover;" alt="Vidyaniketan Main Campus">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 bg-secondary text-white fw-bold rounded-pill" style="font-size: 11px;">Campus</span>
+							</a>
+							<div class="p-4 bg-white text-center">
+								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">College Main Campus</h5>
+								<p class="text-muted mb-0" style="font-size: 13px;">Spacious college building located at Patrapalle, V.Kota, Chittoor District.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 8: Classrooms -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="campus" data-wow-delay="0.2s">
+						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
+							<a href="images/classrooms.webp" class="gallery_popup d-block position-relative" title="Smart Classrooms">
+								<img src="images/classrooms.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover;" alt="Classroom Learning">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 bg-secondary text-white fw-bold rounded-pill" style="font-size: 11px;">Classrooms</span>
+							</a>
+							<div class="p-4 bg-white text-center">
+								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">Smart Classrooms</h5>
+								<p class="text-muted mb-0" style="font-size: 13px;">Interactive classrooms equipped with modern digital teaching aids.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 9: Interactive Teaching -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="academics" data-wow-delay="0.3s">
+						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
+							<a href="images/classroom2.webp" class="gallery_popup d-block position-relative" title="Interactive Faculty Lectures">
+								<img src="images/classroom2.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover;" alt="Interactive Smart Teaching">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 bg-info text-white fw-bold rounded-pill" style="font-size: 11px;">Teaching</span>
+							</a>
+							<div class="p-4 bg-white text-center">
+								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">Interactive Teaching</h5>
+								<p class="text-muted mb-0" style="font-size: 13px;">Engaging conceptual lectures by experienced senior faculty.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Item 10: Science Lab -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="campus" data-wow-delay="0.1s">
+						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
+							<a href="images/biologylab.webp" class="gallery_popup d-block position-relative" title="Science and Biology Lab">
+								<img src="images/biologylab.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover;" alt="Science & Biology Lab">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 bg-secondary text-white fw-bold rounded-pill" style="font-size: 11px;">Laboratories</span>
+							</a>
 							<div class="p-4 bg-white text-center">
 								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">Science & Biology Lab</h5>
-								<p class="text-muted mb-0" style="font-size: 13px;">Fully equipped laboratory for Botany, Zoology, Physics & Chemistry.</p>
+								<p class="text-muted mb-0" style="font-size: 13px;">Fully equipped laboratory for Botany, Zoology, Physics & Chemistry practicals.</p>
 							</div>
 						</div>
 					</div>
 
-					<!-- Item 3: Computer Lab -->
-					<div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.3s">
+					<!-- Item 11: Computer Lab -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="campus" data-wow-delay="0.2s">
 						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
-							<img src="images/computerlab.webp" class="card-img-top w-100" style="height: 220px; object-fit: cover;" alt="Computer Laboratory">
+							<a href="images/computerlab.webp" class="gallery_popup d-block position-relative" title="Computer Lab">
+								<img src="images/computerlab.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover;" alt="Computer Laboratory">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 bg-secondary text-white fw-bold rounded-pill" style="font-size: 11px;">Laboratories</span>
+							</a>
 							<div class="p-4 bg-white text-center">
 								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">Computer Lab</h5>
 								<p class="text-muted mb-0" style="font-size: 13px;">High-speed computer lab supporting digital education & online exams.</p>
@@ -206,35 +354,16 @@
 						</div>
 					</div>
 
-					<!-- Item 4: College Library -->
-					<div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+					<!-- Item 12: Library -->
+					<div class="col-lg-4 col-md-6 mb-4 gallery-item wow fadeInUp" data-category="campus" data-wow-delay="0.3s">
 						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
-							<img src="images/library.webp" class="card-img-top w-100" style="height: 220px; object-fit: cover;" alt="College Library">
+							<a href="images/library.webp" class="gallery_popup d-block position-relative" title="College Library">
+								<img src="images/library.webp" class="card-img-top w-100" style="height: 240px; object-fit: cover;" alt="College Library">
+								<span class="badge position-absolute top-0 end-0 m-3 px-3 py-1 bg-secondary text-white fw-bold rounded-pill" style="font-size: 11px;">Library</span>
+							</a>
 							<div class="p-4 bg-white text-center">
 								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">College Library</h5>
 								<p class="text-muted mb-0" style="font-size: 13px;">Extensive collection of reference books, NCERT materials & journals.</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Item 5: College Building -->
-					<div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.1s">
-						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
-							<img src="images/college.webp" class="card-img-top w-100" style="height: 220px; object-fit: cover;" alt="Vidyaniketan Main Campus">
-							<div class="p-4 bg-white text-center">
-								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">College Main Campus</h5>
-								<p class="text-muted mb-0" style="font-size: 13px;">Modern campus building located at V.Kota, Andhra Pradesh.</p>
-							</div>
-						</div>
-					</div>
-
-					<!-- Item 6: Interactive Smart Classroom -->
-					<div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.2s">
-						<div class="card border-0 shadow-sm overflow-hidden h-100 rounded-3 gallery-card">
-							<img src="images/classroom2.webp" class="card-img-top w-100" style="height: 220px; object-fit: cover;" alt="Interactive Smart Teaching">
-							<div class="p-4 bg-white text-center">
-								<h5 class="fw-bold mb-1" style="color: #0b104a; font-size: 17px;">Interactive Teaching</h5>
-								<p class="text-muted mb-0" style="font-size: 13px;">Engaging conceptual lectures by experienced senior faculty.</p>
 							</div>
 						</div>
 					</div>
@@ -365,5 +494,39 @@
 		<script src="assets/js/wow.min.js"></script>				
 	<!-- scripts js -->
 		<script src="assets/js/scripts.js"></script>
+		<script>
+			$(document).ready(function() {
+				// Initialize Magnific Popup for gallery images
+				$('.gallery_popup').magnificPopup({
+					type: 'image',
+					gallery: {
+						enabled: true
+					},
+					zoom: {
+						enabled: true,
+						duration: 300
+					}
+				});
+
+				// Filter button interactions
+				$('.filter-btn').on('click', function() {
+					$('.filter-btn').removeClass('active');
+					$(this).addClass('active');
+
+					var filter = $(this).attr('data-filter');
+					if (filter === 'all') {
+						$('.gallery-item').fadeIn(300);
+					} else {
+						$('.gallery-item').each(function() {
+							if ($(this).attr('data-category') === filter) {
+								$(this).fadeIn(300);
+							} else {
+								$(this).fadeOut(200);
+							}
+						});
+					}
+				});
+			});
+		</script>
     </body>
 </html>
